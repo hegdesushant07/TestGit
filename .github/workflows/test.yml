@@ -1,0 +1,17 @@
+name: Swift
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [ ready_for_review ]
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Select Xcode Version
+      run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
