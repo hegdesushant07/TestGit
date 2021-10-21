@@ -18,4 +18,3 @@ jobs:
     - with:
         in-progress-label: 'my InProgress label'
         ready-for-review-label: 'my ReadyForReview label'
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
