@@ -15,6 +15,3 @@ jobs:
     - uses: actions/checkout@v2
     - name: Select Xcode Version
       run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
-    - with:
-        in-progress-label: 'my InProgress label'
-        ready-for-review-label: 'my ReadyForReview label'
