@@ -13,11 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Select Xcode Version
       run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
     
     - name: label swapping
-      uses: hegdesushant07/ready-for-review@1.0.0
+      uses: hegdesushant07/TestGit@1.0.0
       with:
         in-progress-label: 'my InProgress label'
         ready-for-review-label: 'my ReadyForReview label'
