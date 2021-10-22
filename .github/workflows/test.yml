@@ -16,7 +16,7 @@ jobs:
     
     - name: Select Xcode Version
       run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
-
-    - uses: actions/labeler@v3
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      
+#     - uses: actions/labeler@v3
+#       with:
+#         repo-token: "${{ secrets.GITHUB_TOKEN }}"
