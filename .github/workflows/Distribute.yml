@@ -10,7 +10,7 @@ jobs:
       steps:
       - name: Check PR labels action step
         id: check_pr_labels
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           labels: '["ReadyTest"]'
