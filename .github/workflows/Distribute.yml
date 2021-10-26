@@ -16,15 +16,9 @@ jobs:
           labels: '["ReadyTest"]'
       - name: See result
         run: echo "${{ steps.check_pr_labels.outputs.result }}"
-      
-  build:
-    if: ${{ github.event.label.name == 'ReadyTest' }}
-    runs-on: macos-11
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Select Xcode Version
-      run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
+        
+      - name: Select Xcode Version
+        run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
       
   
     
