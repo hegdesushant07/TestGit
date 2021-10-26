@@ -1,8 +1,8 @@
 name: Distribute
 
-on:
+on:    
   push:
-    types: [ labeled ]
+    types: [labeled]
     branches: [ main ]
 jobs:
   build:
