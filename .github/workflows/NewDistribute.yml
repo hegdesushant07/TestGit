@@ -1,0 +1,13 @@
+name: NewDistribute
+
+on:    
+  push:
+    branches: [ main ]
+jobs:
+  Build:
+      runs-on: macos-11
+      name: A job to check the PR labels contain given labels
+      if: contains( github.event.pull_request.labels.*.name, 'ReadyTest')
+      steps:
+      - name: Select Xcode Version
+        run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
