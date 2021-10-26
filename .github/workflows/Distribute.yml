@@ -4,6 +4,19 @@ on:
   push:
     branches: [ main ]
 jobs:
+  check_pr_labels_job:
+      runs-on: macos-11
+      name: A job to check the PR labels contain given labels
+      steps:
+      - name: Check PR labels action step
+        id: check_pr_labels
+        uses: actions/checkout@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: '["ReadyTest"]'
+      - name: See result
+        run: echo "${{ steps.check_pr_labels.outputs.result }}"
+      
   build:
     if: ${{ github.event.label.name == 'ReadyTest' }}
     runs-on: macos-11
@@ -13,5 +26,5 @@ jobs:
     - name: Select Xcode Version
       run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
       
-      
+  
     
