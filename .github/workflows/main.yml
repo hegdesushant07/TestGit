@@ -1,0 +1,17 @@
+name: Distribute
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: macos-11
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Select Xcode Version
+      run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
+      if: github.event.label.name == 'ReadyTest'
+      
+    
