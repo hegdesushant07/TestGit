@@ -1,8 +1,6 @@
 name: Distribute
 
 on:    
-  pull_request:
-    types: [ labeled ]
   push:
     branches: [ main ]
 jobs:
