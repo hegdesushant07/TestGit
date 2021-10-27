@@ -11,5 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Run a one-line script
       run: echo Hello, world!
+      
+    - name: Select Xcode Version
+      run: sudo xcode-select -switch /Applications/Xcode_12.5.1.app
