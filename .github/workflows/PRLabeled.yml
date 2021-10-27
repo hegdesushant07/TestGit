@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: ${{ github.event.label.name == 'ReadyTest' }}
+    if: ${{ github.event_name != 'workflow_dispatch' && github.event.label.name == 'ReadyTest' }}
     runs-on: macos-11
 
     steps:
